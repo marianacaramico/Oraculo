@@ -1,0 +1,36 @@
+Existe algum cadastro dos notebooks ativos?
+- Do ponto de vista contabel, a monetização é controlada por ERP - Sapiens Senior, migrando pata o TOVTS
+
+Existem controles de vida útil dos notebooks?
+- o idel seria de cinco anos, porém por conta do uso, e de muita manutenção, aproximadanete dois anos.
+
+É feito contrato com o fornecedor?(de nootbooks)
+- Sim, tem um leasing mercantil pela HP
+
+Tem controle de quais notebooks pestence a alguma sala específica?
+- Não. Mas é feita a contagem diária da quantidade de equipamentos por sala. Que é determinada de 
+acordo com a quantidade de alunos.
+
+Qual informação é interessante(relevante) ter no aplicativo?
+- Sistema de alerta, e controle de localização.
+
+Existe políticas quanto à cameras nas castracas e elevadores?
+- Não, única restrição é nos banheiros 
+
+Podemos abrir os notebooks?
+- "Não alterando a característica atual, não tem problema"
+
+Faria sentido ter uma interface para agendar o uso dos notebooks?
+- Sim
+
+Em quais salas de aulas tem nootbooks?
+- As salas dos seguintes andares: 2º, 3º e 4º andares, e a biblíoteca 
+
+
+// Três redes que atendem todo o prédio, digital team, digital building, digital school(que pega melhor)
+// Usaremos o contrato do azure durante a produção pelos alunos
+// Três níveis de uso dos notebooks> Acadêmico, Eventos, e PROA 
+// Seria bom ter um relatório das manutenções realziadas nos notebooks
+// Semestralmente o pessoa de T.I recolhe as máquinas, para fazer manutenção e diariamente é feita uma contagem dos nootbooks
+// Uso de USB que faz o controle da área de localição
+
