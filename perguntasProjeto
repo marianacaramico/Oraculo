@@ -1,3 +1,5 @@
+-- Perguntas Ana Goulart --
+
 Existe algum cadastro dos notebooks ativos?
 - Do ponto de vista contabel, a monetização é controlada por ERP - Sapiens Senior, migrando pata o TOVTS
 
@@ -34,3 +36,34 @@ Em quais salas de aulas tem nootbooks?
 // Semestralmente o pessoa de T.I recolhe as máquinas, para fazer manutenção e diariamente é feita uma contagem dos nootbooks
 // IDVIEW - Uso de USB que faz o controle da área de localição
 
+Resumo Perguntas do Alex --
+
+Todas as máquinas devem ser ratreadas?
+- Sim, todas as máquinas das salas de aula, sem restrição. Seria interessante, ter a possibilidade de forma de proteger o perifÈrico e as fontes.
+
+Quais plataformas de interface deveremos desenvolver?
+- Desketop e mobile.
+
+Existe algum controle de inventário dos nootbooks da faculdade?
+- O controle que existe hoje é feito na planilha excel, diariamente.
+
+Como deverão ser os alertas?
+- Nada muito escandaloso, é importante um sms, whatsaap, bloqueio físico, sonoro customizado, luminoso ativar e desativar. É desejável, habilita ou desabilita.
+
+Quem deverá receber os alertas?
+- Pessoas e disposítivos cadastrados pelo administrador do sistema
+
+Qual será o serviço de cloud utilizado?
+- Iremos utilizar a rede do azure.
+
+Pode colocar o disposítivo dentro do computador? (necessidade de abrir o nootebok)
+ - Sim.
+
+Seria interessante saber aonde o notebook está, exatamente?
+ - Sim.
+
+Onde colocar o dispositivo? 
+ - Um local em que o usuário não consigua tirar.
+
+É permitido notebook no térreo?
+ - Sim.
