@@ -1,0 +1,522 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+	  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
+	  <script type="text/javascript">
+		window.onload = function () {
+		  var s1 = document.getElementById("s1");
+		  var s2 = document.getElementById("s2");
+		  var s3 = document.getElementById("s3");
+		  var s4 = document.getElementById("s4");
+		  var s5 = document.getElementById("s5");
+		  var s6 = document.getElementById("s6");
+		  var s7 = document.getElementById("s7");
+		  var s8 = document.getElementById("s8");
+		  var s9 = document.getElementById("s9");
+		  var s10 = document.getElementById("s10");
+		  var s11 = document.getElementById("s11");
+		  var s12 = document.getElementById("s12");
+		  var s13 = document.getElementById("s13");
+		  var s14 = document.getElementById("s14");
+		  var s15 = document.getElementById("s15");
+		  var s16 = document.getElementById("s16");
+		  var s17 = document.getElementById("s17");
+		  var s18 = document.getElementById("s18");
+		  var s19 = document.getElementById("s19");
+		  var s20 = document.getElementById("s20");
+		  var s21 = document.getElementById("s21");
+		  var s22 = document.getElementById("s22");
+		  var s23 = document.getElementById("s23");
+		  var s24 = document.getElementById("s24");
+		  var s25 = document.getElementById("s25");
+		  var s26 = document.getElementById("s26");
+		  var s27 = document.getElementById("s27");
+		  var s28 = document.getElementById("s28");
+		  var s29 = document.getElementById("s29");
+		  var s30 = document.getElementById("s30");
+		  var s31 = document.getElementById("s31");
+		  var s32 = document.getElementById("s32");
+		  var s33 = document.getElementById("s33");
+		  var s34 = document.getElementById("s34");
+		  var s35 = document.getElementById("s35");
+		  var s36 = document.getElementById("s36");
+		  var s1Value = parseInt(s1.options[s1.selectedIndex].value);
+		  var s2Value = parseInt(s2.options[s2.selectedIndex].value);
+		  var s3Value = parseInt(s3.options[s3.selectedIndex].value);
+		  var s4Value = parseInt(s4.options[s4.selectedIndex].value);
+		  var s5Value = parseInt(s5.options[s5.selectedIndex].value);
+		  var s6Value = parseInt(s6.options[s6.selectedIndex].value);
+		  var s7Value = parseInt(s7.options[s7.selectedIndex].value);
+		  var s8Value = parseInt(s8.options[s8.selectedIndex].value);
+		  var s9Value = parseInt(s9.options[s9.selectedIndex].value);
+		  var s10Value = parseInt(s10.options[s10.selectedIndex].value);
+		  var s11Value = parseInt(s11.options[s11.selectedIndex].value);
+		  var s12Value = parseInt(s12.options[s12.selectedIndex].value);
+		  var s13Value = parseInt(s13.options[s13.selectedIndex].value);
+		  var s14Value = parseInt(s14.options[s14.selectedIndex].value);
+		  var s15Value = parseInt(s15.options[s15.selectedIndex].value);
+		  var s16Value = parseInt(s16.options[s16.selectedIndex].value);
+		  var s17Value = parseInt(s17.options[s17.selectedIndex].value);
+		  var s18Value = parseInt(s18.options[s18.selectedIndex].value);
+		  var s19Value = parseInt(s19.options[s19.selectedIndex].value);
+		  var s20Value = parseInt(s20.options[s20.selectedIndex].value);
+		  var s21Value = parseInt(s21.options[s21.selectedIndex].value);
+		  var s22Value = parseInt(s22.options[s22.selectedIndex].value);
+		  var s23Value = parseInt(s23.options[s23.selectedIndex].value);
+		  var s24Value = parseInt(s24.options[s24.selectedIndex].value);
+		  var s25Value = parseInt(s25.options[s25.selectedIndex].value);
+		  var s26Value = parseInt(s26.options[s26.selectedIndex].value);
+		  var s27Value = parseInt(s27.options[s27.selectedIndex].value);
+		  var s28Value = parseInt(s28.options[s28.selectedIndex].value);
+		  var s29Value = parseInt(s29.options[s29.selectedIndex].value);
+		  var s30Value = parseInt(s30.options[s30.selectedIndex].value);
+		  var s31Value = parseInt(s31.options[s31.selectedIndex].value);
+		  var s32Value = parseInt(s32.options[s32.selectedIndex].value);
+		  var s33Value = parseInt(s33.options[s33.selectedIndex].value);
+		  var s34Value = parseInt(s34.options[s34.selectedIndex].value);
+		  var s35Value = parseInt(s35.options[s35.selectedIndex].value);
+		  var s36Value = parseInt(s36.options[s36.selectedIndex].value);
+		  //var btnAtivoDevice = document.getElementById("btnAtivoDevice");
+		  var ativosDevice = (s1Value + s2Value + s3Value + s4Value + s5Value + s6Value + s7Value + s8Value + s9Value + s10Value + s11Value + s12Value + s13Value + s14Value + s15Value + s16Value + s17Value + s18Value + s19Value + s20Value + s21Value + s22Value + s23Value + s24Value + s25Value + s26Value + s27Value + s28Value + s29Value + s30Value + s31Value + s32Value + s33Value + s34Value + s35Value + s36Value) / 36;
+		  //btnAtivoDevice.addEventListener('click', calcularAtivosDevice, false);
+		  function calcularAtivosDevice (){
+			
+			location.reload();
+		  }
+		  
+		var chart = new CanvasJS.Chart("chartContainer", {
+			theme: "light2", // "light2", "dark1", "dark2"
+			animationEnabled: false, // change to true		
+			title:{
+				text: "IoT OpenLabs - Assessment - Dimensões do Projeto"
+			},
+			data: [
+			{
+				// Change type to "bar", "area", "spline", "pie",etc.
+				type: "bar",
+				dataPoints: [
+					{ label: "Ativos e Devices",  y: ativosDevice  },
+					{ label: "Comunicao e conetividade", y: 2  },
+					{ label: "Serviços de Backend", y: 1.25  },
+					{ label: "Padrões & Requerimentos regulatórios",  y: 0.9  },
+					{ label: "Ambiente de Projeto",  y: 3  }
+				]
+			}
+			]
+		});
+		chart.render();
+		//console.log()
+		}
+	  </script>
+	</head>
+
+	<body>
+	<div class="col-md-8 offset-md-2" style="margin-top:30px;margin-bottom:30px">
+  
+		<div id="chartContainer" style="height: 300px; width: 100%;"></div>
+		<script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+		<script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+
+		<!--<button id = "btnAtivoDevice">Calcular</button>-->
+		
+		<hr />
+			<div id="at-dev" style="margin-top:30px">			
+				<h1>Ativos e Devices</h1>
+				<div class="row">
+					<div id="geral-ativos" class="col-md-6">
+						<h5>Geral</h5>
+						<div>
+							<label>Número de ativos</label>
+							<select id="s1" class="form-control">
+							  <option value="1">1</option>
+							  <option value="2">2</option>
+							  <option value="3">3</option>
+							  <option value="4">4</option>
+							</select>
+						</div>
+						<div>
+							<label>Valor do ativo individual</label>
+							<select id="s2" class="form-control">
+							  <option value="1">1</option>
+							  <option value="2">2</option>
+							  <option value="3">3</option>
+							  <option value="4">4</option>
+							</select>
+						</div>
+						<div>			
+							<label>Valor econômico adicionado por ativo</label>
+							<select id="s3" class="form-control">
+							  <option value="1">1</option>
+							  <option value="2">2</option>
+							  <option value="3">3</option>
+							  <option value="4">4</option>
+							</select>
+						</div>
+						<div>
+							<label>Complexidade do ativo</label>
+							<select id="s4" class="form-control">
+							  <option value="1">1</option>
+							  <option value="2">2</option>
+							  <option value="3">3</option>
+							  <option value="4">4</option>
+							</select>
+						</div>
+						<div>
+							<label>Heterogeneidade do ativo</label>
+							<select id="s5" class="form-control">
+							  <option value="1">1</option>
+							  <option value="2">2</option>
+							  <option value="3">3</option>
+							  <option value="4">4</option>
+							</select>	
+						</div>		
+					</div>
+					<div id="poder-process" class="col-md-6">
+						<h5>Poder de Processamento</h5>
+						<div>
+							<label>Lógica de negócio local</label>
+							<select id="s6" class="form-control">
+							  <option value="1">1</option>
+							  <option value="2">2</option>
+							  <option value="3">3</option>
+							  <option value="4">4</option>
+							</select>
+						</div>
+						<div>
+							<label>Processamento local de evento</label>
+							<select id="s7" class="form-control">
+							  <option value="1">1</option>
+							  <option value="2">2</option>
+							  <option value="3">3</option>
+							  <option value="4">4</option>
+							</select>
+						</div>
+						<div>
+							<label>Requerimentos de tempo real</label>
+							<select id="s8" class="form-control">
+							  <option value="1">1</option>
+							  <option value="2">2</option>
+							  <option value="3">3</option>
+							  <option value="4">4</option>
+							</select>
+						</div>
+						<div>
+							<label>Gestão local de dados</label>
+							<select id="s9" class="form-control">
+							  <option value="1">1</option>
+							  <option value="2">2</option>
+							  <option value="3">3</option>
+							  <option value="4">4</option>
+							</select>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div id="outros-hardware" class="col-md-6">
+						<h5>Outros requisitos de Hardware</h5>
+						<div>
+							<label>Fonte de energia</label>
+							<select id="s10" class="form-control">
+							  <option value="1">1</option>
+							  <option value="2">2</option>
+							  <option value="3">3</option>
+							  <option value="4">4</option>
+							</select>
+						</div>
+						<div>
+							<label>Ambiente</label>
+							<select id="s11" class="form-control">
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+							</select>
+						</div>
+					</div>
+					<div id="gest-ciclo-vida" class="col-md-6">
+						<h5>Gestão do ciclo de vida</h5>
+						<div>
+							<label>Vida útil projetada dos ativos</label>
+							<select id="s12" class="form-control">
+							  <option value="1">1</option>
+							  <option value="2">2</option>
+							  <option value="3">3</option>
+							  <option value="4">4</option>
+							</select>
+						</div>
+						<div>
+							<label>Restrições para atualizações de Hardware</label>
+							<select id="s13" class="form-control">
+							  <option value="1">1</option>
+							  <option value="2">2</option>
+							  <option value="3">3</option>
+							  <option value="4">4</option>
+							</select>
+						</div>
+						<div>
+							<label>Restrições para atualizações de Software</label>
+							<select id="s14" class="form-control">
+							  <option value="1">1</option>
+							  <option value="2">2</option>
+							  <option value="3">3</option>
+							  <option value="4">4</option>
+							</select>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<hr />
+			
+			<div id="comun-conec">
+				<h1>Comunicação e conetividade</h1>
+				<div class="row">
+					<div id="cc-local" class="col-md-6">
+						<h5>'C&C Local</h5>
+						<div>
+							<label>Tecnologia</label>
+							<select id="s15" class="form-control">
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+							</select>
+						</div>
+						<div>
+							<label>Largura de banda</label>
+							<select id="s16" class="form-control">
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+							</select>
+						</div>
+						<div>
+							<label>Máxima latência</label>
+							<select id="s17" class="form-control">
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+							</select>
+						</div>
+					</div>
+					<div id="cc-remota" class="col-md-6">
+						<h5>'C&C Remota</h5>
+						<div>
+							<label>Tecnologia</label>
+							<select id="s18" class="form-control">
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+							</select>
+						</div>
+						<div>
+							<label>Largura de banda</label>
+							<select id="s19" class="form-control">
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+							</select>
+						</div>
+						<div>
+							<label>Máxima latência</label>
+							<select id="s20" class="form-control">
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+							</select>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<hr />
+			
+			<div id="serv-backend">
+				<h1>Serviços de Backend</h1>
+				<div class="row">
+					<div id="geral-backend" class="col-md-6">
+						<h5>Geral</h5>
+						<div>
+							<label>Estratégia de aplicação</label>
+							<select id="s21" class="form-control">
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+							</select>
+						</div>
+						<div>
+							<label>Complexidade do negócio</label>
+							<select id="s22" class="form-control">
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+							</select>
+						</div>
+						<div>
+							<label>Integração do banckend</label>
+							<select id="s23" class="form-control">
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+							</select>
+						</div>
+					</div>
+					<div id="gest-dados-anal" class="col-md-6">
+						<h5>Gestão de Dados e Analytics</h5>
+						<div>
+							<label>Volume de dados/ingestão por dia</label>
+							<select id="s24" class="form-control">
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+							</select>
+						</div>
+						<div>
+							<label>Variedade de dados</label>
+							<select id="s25" class="form-control">
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+							</select>
+						</div>
+						<div>
+							<label>Variabilidade de dados</label>
+							<select id="s26" class="form-control">
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+							</select>
+						</div>
+						<div>
+							<label>Analytics</label>
+							<select id="s27" class="form-control">
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+							</select>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<hr />
+			
+			<div id="pad-req-obrig">
+				<h1>Padrões & Requerimentos regulatórios</h1> 
+				<div class="row">
+					<div id="req-reg" class="col-md-6">
+						<h5>Requerimentos regulatórios</h5>
+						<div>
+							<label>Região-específicas</label>
+							<select id="s28" class="form-control">
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+							</select>
+						</div>
+						<div>
+							<label>Industrias-específicas</label>
+							<select id="s29" class="form-control">
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+							</select>
+						</div>
+						<div>
+							<label>Tecnologia-específicas</label>
+							<select id="s30" class="form-control">
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+							</select>
+						</div>
+					</div>
+					<div id="padroes" class="col-md-6">
+						<h5>Padrões</h5>
+						<div>
+							<label>Padrões técnicos</label>
+							<select id="s31" class="form-control">
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+							</select>
+						</div>
+						<div>
+							<label>Padrões funcionais/indústria</label>
+							<select id="s32" class="form-control">
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+							</select>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<hr />
+			
+			<div id="amb-proj">
+				<h1>Ambiente de Projeto</h1>
+				<div>
+					<label>Tempo</label>
+					<select id="s33" class="form-control">
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+					</select>
+				</div>
+				<div>
+					<label>Budget</label>
+					<select id="s34" class="form-control">
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+					</select>
+				</div>
+				<div>
+					<label>Competências funcionais e experiência</label>
+					<select id="s35" class="form-control">
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+					</select>
+				</div>
+				<div>
+					<label>Competências técnicas e experiência</label>
+					<select id="s36" class="form-control">
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+					</select>
+				</div>
+			</div>
+			
+			
+		</div>
+  
+	</body>
+
+</html>
