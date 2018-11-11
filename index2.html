@@ -3,58 +3,79 @@
 
 <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-
-    <script type="text/javascript">
-    </script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+	<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="col-md-12" style="margin-top:50px">
+    <div class="col-md-12" style="margin-top:50px; margin-bottom: 30px;">
         <div class="col-md-8 offset-md-2">
+			<div class="text-center titulo tprincipal"><p>Consultoria BandTec</p></div>
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<img src="everynet.png" />
+					<img src="bandtec.png" />
+					<img src="american-tower.png" />
+				</div>
+			</div>
+			<div class="text-center titulo"><p>I. Estratégia e Grau de Maturidade para IoT</p></div>			
             <div class="row">
                 <div class="col-md-11" style="text-align: justify">
-                    1. Empresa tem estratégia definida para IoT? Qual? (descreva: visão, objetivos e princípios
+                    <span class="pergunta">
+						1. Empresa tem estratégia definida para IoT? Qual? (descreva: visão, objetivos e princípios
                     orientadores; alianças estratégicas e ecossistema de parceiros; estrutura de gerenciamento de
                     oportunidades e projetos)
+					</span>
+					<textarea class="form-control descreva" rows="4"></textarea>
                 </div>
                 <div class="col-md-1">
                     <input type="checkbox">
                 </div>
             </div>
-            <!-- copia começando aqui -->
             <hr />
             <div class="row">
                 <div class="col-md-11" style="text-align: justify">
-                    2. Empresa definiu lista de oportunidades priorizada? (descreva)
-                    <!-- só copia daqui esse se tiver "descreva" -->
-                    <textarea class="form-control" rows="4"></textarea>
-                    <!-- até aqui-->
+                    <span class="pergunta">
+						2. Empresa definiu lista de oportunidades priorizada? (descreva)
+					</span>
+                    <textarea class="form-control descreva" rows="4"></textarea>
                 </div>
                 <div class="col-md-1">
                     <input type="checkbox">
                 </div>
             </div>
-            <!-- termina de copiar aqui -->
             <hr />
                 <div class="row">
                     <div class="col-md-11" style="text-align: justify">
-                        3. Empresa já implantou/está implantando projeto IoT? (descreva: oportunidade, arquitetura da
+						<span class="pergunta">
+							3. Empresa já implantou/está implantando projeto IoT? (descreva: oportunidade, arquitetura da
                         solução, tecnologias de conectividade, parceiros e fornecedores, governança, infraestrutura,
                         plataformas utilizadas, integração, KPIs, ROI, resultados e performance)
+						</span>
+						<textarea class="form-control descreva" rows="4"></textarea>
                     </div>
                     <div class="col-md-1">
                         <input type="checkbox">
                     </div>
                 </div>
-            <!-- cola aqui -->
             <hr />
             <div class="row">
                 <div class="col-md-11" style="text-align: justify">
-                    4. Possui conhecimento sobre as tecnologias para Internet das Coisas? Quais? 
-                    (descreva: tecnologia, origem do conhecimento)
-                    <!-- só copia daqui esse se tiver "descreva" -->
-                    <textarea class="form-control" rows="4"></textarea>
-                    <!-- até aqui-->
+                    <span class="pergunta">
+						4. Possui conhecimento sobre as tecnologias para Internet das Coisas? Quais? (descreva: tecnologia, origem do conhecimento)
+					</span>
+                    <textarea class="form-control descreva" rows="4"></textarea>
+                </div>
+                <div class="col-md-1">
+                    <input type="checkbox">
+                </div>
+            </div>	
+			<div class="text-center titulo"><p>II. Conhecimento sobre LoRaWAN</p></div>	
+            <div class="row">
+                <div class="col-md-11" style="text-align: justify">
+                    <span class="pergunta">
+						1. Conhece a tecnologia LoRaWAN?  
+					</span>					
                 </div>
                 <div class="col-md-1">
                     <input type="checkbox">
@@ -63,7 +84,19 @@
             <hr/>
             <div class="row">
                 <div class="col-md-11" style="text-align: justify">
-                    1. Conhece a tecnologia LoRaWAN?            
+                    <span class="pergunta">
+						2. Se sim, qual a origem do conhecimento? (Ex.: estudos próprios, cursos, desenvolvedor, usuário de solução, parceiro de tecnologia, etc.)
+					</span>
+                    <textarea class="form-control descreva" rows="4"></textarea>  
+                </div>
+            </div>
+			<div class="text-center titulo"><p>III. Motivação para aproximação com IoT OpenLabs</p></div>	
+            <div class="row">
+                <div class="col-md-11" style="text-align: justify">
+                    <span class="pergunta">
+						1. Não definiu caso de uso. Necessita suporte para identificar e priorizar oportunidades (descreva)
+					</span>
+                    <textarea class="form-control descreva" rows="4"></textarea>                              
                 </div>
                 <div class="col-md-1">
                     <input type="checkbox">
@@ -72,11 +105,10 @@
             <hr/>
             <div class="row">
                 <div class="col-md-11" style="text-align: justify">
-                    2. Se sim, qual a origem do conhecimento? 
-                    (Ex.: estudos próprios, cursos, desenvolvedor, usuário de solução, parceiro de tecnologia, etc.) 
-
-                    <textarea class="form-control" rows="4"></textarea>   
-
+                    <span class="pergunta">
+						2. Possui caso de uso definido/priorizado. Precisa avaliar a viabilidade técnica e econômica (descreva).
+					</span>
+                    <textarea class="form-control descreva" rows="4"></textarea>                              
                 </div>
                 <div class="col-md-1">
                     <input type="checkbox">
@@ -85,10 +117,10 @@
             <hr/>
             <div class="row">
                 <div class="col-md-11" style="text-align: justify">
-                    1. Não definiu caso de uso. Necessita suporte para identificar e priorizar oportunidades (descreva). 
-
-                    <textarea class="form-control" rows="4"></textarea>   
-                           
+                    <span class="pergunta">
+						3. Já realizou algum teste prévio para este caso de uso? (descreva: tecnologias testadas, resultados, fatores críticos para rejeitar solução)
+                    </span>
+					<textarea class="form-control descreva" rows="4"></textarea>                              
                 </div>
                 <div class="col-md-1">
                     <input type="checkbox">
@@ -97,66 +129,51 @@
             <hr/>
             <div class="row">
                 <div class="col-md-11" style="text-align: justify">
-                    2. Possui caso de uso definido/priorizado. Precisa avaliar a viabilidade técnica e econômica (descreva).
-
-                    <textarea class="form-control" rows="4"></textarea>   
-                           
+                    <span class="pergunta">
+						4. Já definiu solução usando LoRaWAN e desenho técnico. Necessita definir fornecedores e apoio para implantação (dispositivos, plataformas, conectividade, integrador, etc) (descreva)
+                    </span>
+					<textarea class="form-control descreva" rows="4"></textarea>                              
                 </div>
                 <div class="col-md-1">
                     <input type="checkbox">
+                </div>
+            </div>
+			<div class="text-center titulo"><p>IV. Descrição do Caso de Uso</p></div>	
+            <div class="row">
+                <div class="col-md-11" style="text-align: justify">
+                    <span class="pergunta">
+						1. Descrição detalhada do processo atual: local(is) onde o processo acontece; descrição do workflow: etapas, inputs,outputs, ativos e estrutura de recursos utilizados, vida útil e valor dos ativos, papéis, variáveis e dimensões controladas, pontos de controle, KPIs, custos e receitas associados, condições ambientais, regras, custos da não conformidade, riscos, regulamentação, segurança        
+					</span>
+					<textarea class="form-control descreva" rows="4"></textarea>					
                 </div>
             </div>
             <hr/>
             <div class="row">
                 <div class="col-md-11" style="text-align: justify">
-                    3. Já realizou algum teste prévio para este caso de uso? (descreva: tecnologias testadas, resultados, 
-                    fatores críticos para rejeitar solução)
-
-                    <textarea class="form-control" rows="4"></textarea>   
-                           
-                </div>
-                <div class="col-md-1">
-                    <input type="checkbox">
-                </div>
-            </div>
-
-            <hr/>
-            <div class="row">
-                <div class="col-md-11" style="text-align: justify">
-                    4. Já definiu solução usando LoRaWAN e desenho técnico. Necessita definir fornecedores e apoio para 
-                    implantação (dispositivos, plataformas, conectividade, integrador, etc) (descreva)
-
-                    <textarea class="form-control" rows="4"></textarea>   
-                           
-                </div>
-                <div class="col-md-1">
-                    <input type="checkbox">
-                </div>
-            </div>
-            <hr/>
-            <div class="row">
-                <div class="col-md-11" style="text-align: justify">
-                    1. Descrição detalhada do processo atual: local(is) onde o processo acontece; descrição do workflow: etapas, 
-                    inputs,outputs, ativos e estrutura de recursos utilizados, vida útil e valor dos ativos, papéis, variáveis e 
-                    dimensões controladas, pontos de controle, KPIs, custos e receitas associados, condições ambientais, regras, 
-                    custos da não conformidade, riscos, regulamentação, segurança                      
-                </div>
-                <div class="col-md-1">
-                    <input type="checkbox">
-                </div>
-            </div>
-            <hr/>
-            <div class="row">
-                <div class="col-md-11" style="text-align: justify">
-                    2. Preencher pasta Template, registrando na coluna comentários o detalhamento da variável analisada, quando aplicável
-                </div>
-                <div class="col-md-1">
-                    <input type="checkbox">
-                </div>
-            </div>
-            
-            
-            <a href="index.html">aaaaaa</a>
+                    <span class="pergunta">
+						2. Preencher pasta Template, registrando na coluna comentários o detalhamento da variável analisada, quando aplicável
+					</span>
+					<textarea class="form-control descreva" rows="4"></textarea>
+				</div>
+            </div>           
+            <hr />
+			<a href="index.html" class="btn btn-primary" target="_blank"><i class="fas fa-arrow-left"></i> Voltar ao gráfico</a>
         </div>
-    </div>
+		<div class="col-md-2">
+			<button type="button" onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-chevron-up"></i></button>
+		</div>
+	</div>
+	<script type="text/javascript">
+		window.onscroll = function() {scrollFunction()};
+		function scrollFunction() {
+			if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+				document.getElementById("myBtn").style.display = "block";
+			} else {
+				document.getElementById("myBtn").style.display = "none";
+			}
+		}
+		function topFunction() {
+			document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+		}
+	</script>
 </body>
