@@ -4,6 +4,7 @@
 <head>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+	<link rel="stylesheet" href="style.css">
 	<script type="text/javascript">
 		window.onload = function () {
 			var ativosDevice = 0;
@@ -182,507 +183,485 @@
 			}
 		}
 	</script>
-	<style>
-		#myBtn {
-			display: none;
-			position: fixed;
-			bottom: 20px;
-			right: 30px;
-			z-index: 99;
-			border: none;
-			outline: none;
-			background-color: #ff6b99;
-			color: white;
-			cursor: pointer;
-			border-radius: 50%;
-			font-size: 30px;
-			width: 50px;
-			height: 50px;
-			font-size: 30px;
-		}
-
-		#myBtn:hover {
-			background-color: transparent;
-			border: 1px solid #ff6b99;
-			color: #ff6b99;
-		}
-	</style>
 </head>
 
 <body style="overflow-x: hidden">
 	<div class="row">
 		<div class="col-md-8 offset-md-2" style="margin-top:30px;margin-bottom:30px">
 
-		<div id="chartContainer" style="height: 300px; width: 100%; position: sticky; top: 0; z-index: 1"></div>
-		<script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
-		<script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+			<div id="chartContainer" style="height: 300px; width: 100%; position: sticky; top: 0; z-index: 1"></div>
+			<script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+			<script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
 
 
 
-		<hr />
+			<hr />
 
-		<div id="graphic">
-			<h5>Vizualização do gráfico</h5>
-			<div class="row">
-				<div id="cc-local" class="col-md-6">
-					<div>
-						<label>Tipo</label>
-						<select id="s37" class="form-control">
-							<option value="1">Barra</option>
-							<option value="2">Área</option>
-							<option value="3">Onda</option>
-							<option value="4">Pizza</option>
-						</select>
+			<div id="graphic">
+				<h5>Vizualização do gráfico</h5>
+				<div class="row">
+					<div id="cc-local" class="col-md-4">
+						<div>
+							<label>Tipo</label>
+							<select id="s37" class="form-control">
+								<option value="1">Barra</option>
+								<option value="2">Área</option>
+								<option value="3">Onda</option>
+								<option value="4">Pizza</option>
+							</select>
+						</div>
 					</div>
-				</div>
-				<div id="cc-remota" class="col-md-6">
-					<div>
-						<label>Cor</label>
-						<select id="s38" class="form-control">
-							<option value="1">Escuro 1</option>
-							<option value="2">Escuro 2</option>
-							<option value="3">Claro 1</option>
-							<option value="4">Claro 2</option>
-						</select>
+					<div id="cc-remota" class="col-md-4">
+						<div>
+							<label>Cor</label>
+							<select id="s38" class="form-control">
+								<option value="1">Escuro 1</option>
+								<option value="2">Escuro 2</option>
+								<option value="3">Claro 1</option>
+								<option value="4">Claro 2</option>
+							</select>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<button type="button" id="btnimprimir" class="btn btn-success" style="margin-top: 52px;width: 100%"><i class="fas fa-print"></i> Imprimir</button>
 					</div>
 				</div>
 			</div>
+
+
+
+			<hr />
+			<div id="at-dev" style="margin-top:30px">
+				<h1>Ativos e Devices</h1>
+				<div class="row">
+					<div id="geral-ativos" class="col-md-6">
+						<h5>Geral</h5>
+						<div>
+							<label>Número de ativos</label>
+							<select id="s1" class="form-control">
+								<option value="0">Selecione</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+							</select>
+						</div>
+						<div>
+							<label>Valor do ativo individual</label>
+							<select id="s2" class="form-control">
+								<option value="0">Selecione</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+							</select>
+						</div>
+						<div>
+							<label>Valor econômico adicionado por ativo</label>
+							<select id="s3" class="form-control">
+								<option value="0">Selecione</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+							</select>
+						</div>
+						<div>
+							<label>Complexidade do ativo</label>
+							<select id="s4" class="form-control">
+								<option value="0">Selecione</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+							</select>
+						</div>
+						<div>
+							<label>Heterogeneidade do ativo</label>
+							<select id="s5" class="form-control">
+								<option value="0">Selecione</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+							</select>
+						</div>
+					</div>
+					<div id="poder-process" class="col-md-6">
+						<h5>Poder de Processamento</h5>
+						<div>
+							<label>Lógica de negócio local</label>
+							<select id="s6" class="form-control">
+								<option value="0">Selecione</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+							</select>
+						</div>
+						<div>
+							<label>Processamento local de evento</label>
+							<select id="s7" class="form-control">
+								<option value="0">Selecione</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+							</select>
+						</div>
+						<div>
+							<label>Requerimentos de tempo real</label>
+							<select id="s8" class="form-control">
+								<option value="0">Selecione</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+							</select>
+						</div>
+						<div>
+							<label>Gestão local de dados</label>
+							<select id="s9" class="form-control">
+								<option value="0">Selecione</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+							</select>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div id="outros-hardware" class="col-md-6">
+						<h5>Outros requisitos de Hardware</h5>
+						<div>
+							<label>Fonte de energia</label>
+							<select id="s10" class="form-control">
+								<option value="0">Selecione</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+							</select>
+						</div>
+						<div>
+							<label>Ambiente</label>
+							<select id="s11" class="form-control">
+								<option value="0">Selecione</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+							</select>
+						</div>
+					</div>
+					<div id="gest-ciclo-vida" class="col-md-6">
+						<h5>Gestão do ciclo de vida</h5>
+						<div>
+							<label>Vida útil projetada dos ativos</label>
+							<select id="s12" class="form-control">
+								<option value="0">Selecione</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+							</select>
+						</div>
+						<div>
+							<label>Restrições para atualizações de Hardware</label>
+							<select id="s13" class="form-control">
+								<option value="0">Selecione</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+							</select>
+						</div>
+						<div>
+							<label>Restrições para atualizações de Software</label>
+							<select id="s14" class="form-control">
+								<option value="0">Selecione</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+							</select>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<hr />
+
+			<div id="comun-conec">
+				<h1>Comunicação e conetividade</h1>
+				<div class="row">
+					<div id="cc-local" class="col-md-6">
+						<h5>'C&C Local</h5>
+						<div>
+							<label>Tecnologia</label>
+							<select id="s15" class="form-control">
+								<option value="0">Selecione</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+							</select>
+						</div>
+						<div>
+							<label>Largura de banda</label>
+							<select id="s16" class="form-control">
+								<option value="0">Selecione</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+							</select>
+						</div>
+						<div>
+							<label>Máxima latência</label>
+							<select id="s17" class="form-control">
+								<option value="0">Selecione</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+							</select>
+						</div>
+					</div>
+					<div id="cc-remota" class="col-md-6">
+						<h5>'C&C Remota</h5>
+						<div>
+							<label>Tecnologia</label>
+							<select id="s18" class="form-control">
+								<option value="0">Selecione</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+							</select>
+						</div>
+						<div>
+							<label>Largura de banda</label>
+							<select id="s19" class="form-control">
+								<option value="0">Selecione</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+							</select>
+						</div>
+						<div>
+							<label>Máxima latência</label>
+							<select id="s20" class="form-control">
+								<option value="0">Selecione</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+							</select>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<hr />
+
+			<div id="serv-backend">
+				<h1>Serviços de Backend</h1>
+				<div class="row">
+					<div id="geral-backend" class="col-md-6">
+						<h5>Geral</h5>
+						<div>
+							<label>Estratégia de aplicação</label>
+							<select id="s21" class="form-control">
+								<option value="0">Selecione</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+							</select>
+						</div>
+						<div>
+							<label>Complexidade do negócio</label>
+							<select id="s22" class="form-control">
+								<option value="0">Selecione</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+							</select>
+						</div>
+						<div>
+							<label>Integração do banckend</label>
+							<select id="s23" class="form-control">
+								<option value="0">Selecione</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+							</select>
+						</div>
+					</div>
+					<div id="gest-dados-anal" class="col-md-6">
+						<h5>Gestão de Dados e Analytics</h5>
+						<div>
+							<label>Volume de dados/ingestão por dia</label>
+							<select id="s24" class="form-control">
+								<option value="0">Selecione</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+							</select>
+						</div>
+						<div>
+							<label>Variedade de dados</label>
+							<select id="s25" class="form-control">
+								<option value="0">Selecione</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+							</select>
+						</div>
+						<div>
+							<label>Variabilidade de dados</label>
+							<select id="s26" class="form-control">
+								<option value="0">Selecione</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+							</select>
+						</div>
+						<div>
+							<label>Analytics</label>
+							<select id="s27" class="form-control">
+								<option value="0">Selecione</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+							</select>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<hr />
+
+			<div id="pad-req-obrig">
+				<h1>Padrões & Requerimentos regulatórios</h1>
+				<div class="row">
+					<div id="req-reg" class="col-md-6">
+						<h5>Requerimentos regulatórios</h5>
+						<div>
+							<label>Região-específicas</label>
+							<select id="s28" class="form-control">
+								<option value="0">Selecione</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+							</select>
+						</div>
+						<div>
+							<label>Industrias-específicas</label>
+							<select id="s29" class="form-control">
+								<option value="0">Selecione</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+							</select>
+						</div>
+						<div>
+							<label>Tecnologia-específicas</label>
+							<select id="s30" class="form-control">
+								<option value="0">Selecione</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+							</select>
+						</div>
+					</div>
+					<div id="padroes" class="col-md-6">
+						<h5>Padrões</h5>
+						<div>
+							<label>Padrões técnicos</label>
+							<select id="s31" class="form-control">
+								<option value="0">Selecione</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+							</select>
+						</div>
+						<div>
+							<label>Padrões funcionais/indústria</label>
+							<select id="s32" class="form-control">
+								<option value="0">Selecione</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+							</select>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<hr />
+
+			<div id="amb-proj">
+				<h1>Ambiente de Projeto</h1>
+				<div>
+					<label>Tempo</label>
+					<select id="s33" class="form-control">
+						<option value="0">Selecione</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+					</select>
+				</div>
+				<div>
+					<label>Budget</label>
+					<select id="s34" class="form-control">
+						<option value="0">Selecione</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+					</select>
+				</div>
+				<div>
+					<label>Competências funcionais e experiência</label>
+					<select id="s35" class="form-control">
+						<option value="0">Selecione</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+					</select>
+				</div>
+				<div>
+					<label>Competências técnicas e experiência</label>
+					<select id="s36" class="form-control">
+						<option value="0">Selecione</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+					</select>
+				</div>
+			</div>
+			<hr />
+			<a href="index2.html" class="btn btn-primary" target="_blank">Responder ao questionário <i class="fas fa-arrow-right"></i></a>
+
 		</div>
-
-
-
-		<hr />
-		<div id="at-dev" style="margin-top:30px">
-			<h1>Ativos e Devices</h1>
-			<div class="row">
-				<div id="geral-ativos" class="col-md-6">
-					<h5>Geral</h5>
-					<div>
-						<label>Número de ativos</label>
-						<select id="s1" class="form-control">
-							<option value="0">Selecione</option>
-							<option value="1">1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
-							<option value="4">4</option>
-						</select>
-					</div>
-					<div>
-						<label>Valor do ativo individual</label>
-						<select id="s2" class="form-control">
-							<option value="0">Selecione</option>
-							<option value="1">1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
-							<option value="4">4</option>
-						</select>
-					</div>
-					<div>
-						<label>Valor econômico adicionado por ativo</label>
-						<select id="s3" class="form-control">
-							<option value="0">Selecione</option>
-							<option value="1">1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
-							<option value="4">4</option>
-						</select>
-					</div>
-					<div>
-						<label>Complexidade do ativo</label>
-						<select id="s4" class="form-control">
-							<option value="0">Selecione</option>
-							<option value="1">1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
-							<option value="4">4</option>
-						</select>
-					</div>
-					<div>
-						<label>Heterogeneidade do ativo</label>
-						<select id="s5" class="form-control">
-							<option value="0">Selecione</option>
-							<option value="1">1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
-							<option value="4">4</option>
-						</select>
-					</div>
-				</div>
-				<div id="poder-process" class="col-md-6">
-					<h5>Poder de Processamento</h5>
-					<div>
-						<label>Lógica de negócio local</label>
-						<select id="s6" class="form-control">
-							<option value="0">Selecione</option>
-							<option value="1">1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
-							<option value="4">4</option>
-						</select>
-					</div>
-					<div>
-						<label>Processamento local de evento</label>
-						<select id="s7" class="form-control">
-							<option value="0">Selecione</option>
-							<option value="1">1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
-							<option value="4">4</option>
-						</select>
-					</div>
-					<div>
-						<label>Requerimentos de tempo real</label>
-						<select id="s8" class="form-control">
-							<option value="0">Selecione</option>
-							<option value="1">1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
-							<option value="4">4</option>
-						</select>
-					</div>
-					<div>
-						<label>Gestão local de dados</label>
-						<select id="s9" class="form-control">
-							<option value="0">Selecione</option>
-							<option value="1">1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
-							<option value="4">4</option>
-						</select>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div id="outros-hardware" class="col-md-6">
-					<h5>Outros requisitos de Hardware</h5>
-					<div>
-						<label>Fonte de energia</label>
-						<select id="s10" class="form-control">
-							<option value="0">Selecione</option>
-							<option value="1">1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
-							<option value="4">4</option>
-						</select>
-					</div>
-					<div>
-						<label>Ambiente</label>
-						<select id="s11" class="form-control">
-							<option value="0">Selecione</option>
-							<option value="1">1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
-							<option value="4">4</option>
-						</select>
-					</div>
-				</div>
-				<div id="gest-ciclo-vida" class="col-md-6">
-					<h5>Gestão do ciclo de vida</h5>
-					<div>
-						<label>Vida útil projetada dos ativos</label>
-						<select id="s12" class="form-control">
-							<option value="0">Selecione</option>
-							<option value="1">1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
-							<option value="4">4</option>
-						</select>
-					</div>
-					<div>
-						<label>Restrições para atualizações de Hardware</label>
-						<select id="s13" class="form-control">
-							<option value="0">Selecione</option>
-							<option value="1">1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
-							<option value="4">4</option>
-						</select>
-					</div>
-					<div>
-						<label>Restrições para atualizações de Software</label>
-						<select id="s14" class="form-control">
-							<option value="0">Selecione</option>
-							<option value="1">1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
-							<option value="4">4</option>
-						</select>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<hr />
-
-		<div id="comun-conec">
-			<h1>Comunicação e conetividade</h1>
-			<div class="row">
-				<div id="cc-local" class="col-md-6">
-					<h5>'C&C Local</h5>
-					<div>
-						<label>Tecnologia</label>
-						<select id="s15" class="form-control">
-							<option value="0">Selecione</option>
-							<option value="1">1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
-							<option value="4">4</option>
-						</select>
-					</div>
-					<div>
-						<label>Largura de banda</label>
-						<select id="s16" class="form-control">
-							<option value="0">Selecione</option>
-							<option value="1">1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
-							<option value="4">4</option>
-						</select>
-					</div>
-					<div>
-						<label>Máxima latência</label>
-						<select id="s17" class="form-control">
-							<option value="0">Selecione</option>
-							<option value="1">1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
-							<option value="4">4</option>
-						</select>
-					</div>
-				</div>
-				<div id="cc-remota" class="col-md-6">
-					<h5>'C&C Remota</h5>
-					<div>
-						<label>Tecnologia</label>
-						<select id="s18" class="form-control">
-							<option value="0">Selecione</option>
-							<option value="1">1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
-							<option value="4">4</option>
-						</select>
-					</div>
-					<div>
-						<label>Largura de banda</label>
-						<select id="s19" class="form-control">
-							<option value="0">Selecione</option>
-							<option value="1">1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
-							<option value="4">4</option>
-						</select>
-					</div>
-					<div>
-						<label>Máxima latência</label>
-						<select id="s20" class="form-control">
-							<option value="0">Selecione</option>
-							<option value="1">1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
-							<option value="4">4</option>
-						</select>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<hr />
-
-		<div id="serv-backend">
-			<h1>Serviços de Backend</h1>
-			<div class="row">
-				<div id="geral-backend" class="col-md-6">
-					<h5>Geral</h5>
-					<div>
-						<label>Estratégia de aplicação</label>
-						<select id="s21" class="form-control">
-							<option value="0">Selecione</option>
-							<option value="1">1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
-							<option value="4">4</option>
-						</select>
-					</div>
-					<div>
-						<label>Complexidade do negócio</label>
-						<select id="s22" class="form-control">
-							<option value="0">Selecione</option>
-							<option value="1">1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
-							<option value="4">4</option>
-						</select>
-					</div>
-					<div>
-						<label>Integração do banckend</label>
-						<select id="s23" class="form-control">
-							<option value="0">Selecione</option>
-							<option value="1">1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
-							<option value="4">4</option>
-						</select>
-					</div>
-				</div>
-				<div id="gest-dados-anal" class="col-md-6">
-					<h5>Gestão de Dados e Analytics</h5>
-					<div>
-						<label>Volume de dados/ingestão por dia</label>
-						<select id="s24" class="form-control">
-							<option value="0">Selecione</option>
-							<option value="1">1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
-							<option value="4">4</option>
-						</select>
-					</div>
-					<div>
-						<label>Variedade de dados</label>
-						<select id="s25" class="form-control">
-							<option value="0">Selecione</option>
-							<option value="1">1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
-							<option value="4">4</option>
-						</select>
-					</div>
-					<div>
-						<label>Variabilidade de dados</label>
-						<select id="s26" class="form-control">
-							<option value="0">Selecione</option>
-							<option value="1">1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
-							<option value="4">4</option>
-						</select>
-					</div>
-					<div>
-						<label>Analytics</label>
-						<select id="s27" class="form-control">
-							<option value="0">Selecione</option>
-							<option value="1">1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
-							<option value="4">4</option>
-						</select>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<hr />
-
-		<div id="pad-req-obrig">
-			<h1>Padrões & Requerimentos regulatórios</h1>
-			<div class="row">
-				<div id="req-reg" class="col-md-6">
-					<h5>Requerimentos regulatórios</h5>
-					<div>
-						<label>Região-específicas</label>
-						<select id="s28" class="form-control">
-							<option value="0">Selecione</option>
-							<option value="1">1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
-							<option value="4">4</option>
-						</select>
-					</div>
-					<div>
-						<label>Industrias-específicas</label>
-						<select id="s29" class="form-control">
-							<option value="0">Selecione</option>
-							<option value="1">1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
-							<option value="4">4</option>
-						</select>
-					</div>
-					<div>
-						<label>Tecnologia-específicas</label>
-						<select id="s30" class="form-control">
-							<option value="0">Selecione</option>
-							<option value="1">1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
-							<option value="4">4</option>
-						</select>
-					</div>
-				</div>
-				<div id="padroes" class="col-md-6">
-					<h5>Padrões</h5>
-					<div>
-						<label>Padrões técnicos</label>
-						<select id="s31" class="form-control">
-							<option value="0">Selecione</option>
-							<option value="1">1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
-							<option value="4">4</option>
-						</select>
-					</div>
-					<div>
-						<label>Padrões funcionais/indústria</label>
-						<select id="s32" class="form-control">
-							<option value="0">Selecione</option>
-							<option value="1">1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
-							<option value="4">4</option>
-						</select>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<hr />
-
-		<div id="amb-proj">
-			<h1>Ambiente de Projeto</h1>
-			<div>
-				<label>Tempo</label>
-				<select id="s33" class="form-control">
-					<option value="0">Selecione</option>
-					<option value="1">1</option>
-					<option value="2">2</option>
-					<option value="3">3</option>
-					<option value="4">4</option>
-				</select>
-			</div>
-			<div>
-				<label>Budget</label>
-				<select id="s34" class="form-control">
-					<option value="0">Selecione</option>
-					<option value="1">1</option>
-					<option value="2">2</option>
-					<option value="3">3</option>
-					<option value="4">4</option>
-				</select>
-			</div>
-			<div>
-				<label>Competências funcionais e experiência</label>
-				<select id="s35" class="form-control">
-					<option value="0">Selecione</option>
-					<option value="1">1</option>
-					<option value="2">2</option>
-					<option value="3">3</option>
-					<option value="4">4</option>
-				</select>
-			</div>
-			<div>
-				<label>Competências técnicas e experiência</label>
-				<select id="s36" class="form-control">
-					<option value="0">Selecione</option>
-					<option value="1">1</option>
-					<option value="2">2</option>
-					<option value="3">3</option>
-					<option value="4">4</option>
-				</select>
-			</div>
-		</div>
-		<hr />
-		<button type="button" onclick="window.location.href='index2.html'" class="btn btn-primary">Responder questionário</button>
-
-	</div>
 		<div class="col-md-2">
 			<button type="button" onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-chevron-up"></i></button>
 		</div>
@@ -696,9 +675,8 @@
 				document.getElementById("myBtn").style.display = "none";
 			}
 		}
-
 		function topFunction() {
-			document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+			document.documentElement.scrollTop = 0;
 		}
 	</script>
 </body>
