@@ -1,0 +1,29 @@
+@media print {
+	#btnimprimir, .hrprintno, #graphic, #btnprox, #myBtn {
+		display: none;
+	}
+
+	#chartContainer {
+		margin-left: -70px;
+		margin-top: 80px;
+		margin-bottom: 140px;
+	}
+
+	#at-dev {
+		margin-bottom: 140px;
+	}
+
+	#comun-conec {
+		margin-top: 1180px;
+	}
+
+	.broh {
+		display: initial !important;
+	}
+
+	hr {
+		margin-top: 50px;
+		margin-bottom: 50px;
+	}
+
+}

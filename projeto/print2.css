@@ -1,0 +1,14 @@
+@media print {
+    #btnimprimir, .hrprintno, #btnprox {
+        display: none;
+    }
+
+    .consultoria {
+        margin-top: 100px;
+    }
+
+    .broh {
+		display: initial !important;
+    }
+    
+}
